@@ -251,6 +251,11 @@ def index():
 def logs():
     return render_template('logs.html')
 
+# Add the new route for the "Cages" page
+@app.route('/cages')
+def cages():
+    return render_template('cages.html')
+
 @app.route('/clear-logs', methods=['POST'])
 def clear_logs():
     HistoryLog.query.delete()
